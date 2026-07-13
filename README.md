@@ -1,6 +1,6 @@
 # FPGA-ITCH-Parser
 
-# AXI4-Stream NASDAQ ITCH 5.0 Parser — Alignment Bug Demo
+# AXI4-Stream NASDAQ ITCH 5.0 Parser 
 
 A hardware implementation of a low-latency NASDAQ ITCH 5.0 market data parser designed in SystemVerilog. The module ingests a unaligned binary stream over a 32-bit AXI4-Stream slave interface and decodes message blocks into normalized structural layouts (`normalized_msg_t`).
 
