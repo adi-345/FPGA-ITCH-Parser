@@ -23,4 +23,3 @@ FPGA-ITCH-Parser/
     ├── itch_parser_tb.sv
     ├── trading_engine_tb.sv
     └── generate_vectors.py
-```text
