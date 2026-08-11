@@ -1,0 +1,17 @@
+# Vivado build artifacts & temporary logs
+*.log
+*.jou
+*.str
+*.pb
+*.wdb
+*.dir
+.Xil/
+*.sim/
+*.runs/
+*.cache/
+*.hw/
+*.ip_user_files/
+
+# OS and Python junk
+Thumbs.db
+__pycache__/
