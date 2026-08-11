@@ -23,3 +23,11 @@ FPGA-ITCH-Parser/
     ├── itch_parser_tb.sv
     ├── trading_engine_tb.sv
     └── generate_vectors.py
+```
+---
+## Future Work
+C++ Software Interface: Build a C++ driver using DMA / PCIe or socket communication to feed live or PCAP market data into the FPGA model from software.
+
+10GbE Network MAC Integration: Connect the AXI-Stream slave interface directly to a 10GbE MAC / PHY core (such as Xilinx 10GBASE-R) to process incoming Ethernet frames directly on physical FPGA hardware.
+
+Full Order Book Tracking: Expand message support to handle cancellation, order replacement, and depth tracking across multi-level bid/ask stacks. This repo is already underway and available on this account, although currently separate.
