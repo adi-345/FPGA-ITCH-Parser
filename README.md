@@ -3,7 +3,25 @@
 ## Overview
 This repository contains a SystemVerilog implementation of a hardware parser and basic trading engine designed for NASDAQ ITCH 5.0 market data feeds. The design accepts incoming binary market data over a 32-bit AXI4-Stream interface, handles byte alignment issues caused by variable-length messages, extracts key fields, and generates buy or sell signals when specific trading conditions are met.
 
-The project is structured to be straightforward and easy to follow for anyone looking to learn SystemVerilog, AXI-Stream data processing, and basic digital design for high-frequency trading applications. This was also my beginner project over a three month summer, and is how I taught myself Systemverilog. I started by going through the Yedida Systemverilog guide cover to cover, and trying to complete all the excercises inside myself: https://zyedidia.github.io/notes/sv_guide.pdf. I'd highly recommend it for anyone just starting out. If you're reading this and also interested in building cool stuff in this space, email me at choksi3@illinois.edu.
+If you're reading this and also interested in building cool stuff in this space, email me at choksi3@illinois.edu.
+
+## Results (Vivado, post-implementation, [part number])
+
+| Metric           | Value                          |
+|------------------|--------------------------------|
+| LUTs             | 716 (755 post-synthesis)       |
+| Flip-flops       | 716                            |
+| Clock            | 11 ns (90 MHz), timing met     |
+| Worst neg. slack | +0.477 ns                      |
+| Estimated power  | 0.072 W                        |
+
+The critical path runs through the 64-bit multiply-accumulate stage in `trade_math_core.sv`.
+
+## Verification
+
+- `generate_vectors.py` produces spec-conformant ITCH 5.0 byte streams, both directed cases and per-field randomized messages.
+- `itch_parser_tb.sv` and `trading_engine_tb.sv` are self-checking: they compare trigger count and cycle-exact trigger timing against expected values.
+- Known limitation: `tready` is held high, so backpressure is not exercised.
 
 ---
 
