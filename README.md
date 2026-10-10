@@ -5,7 +5,7 @@ This repository contains a SystemVerilog implementation of a hardware parser and
 
 If you're reading this and also interested in building cool stuff in this space, email me at choksi3@illinois.edu.
 
-## Results (Vivado, post-implementation, [part number])
+## Results (Vivado, post-implementation, XC7S50CSGA324-1)
 
 | Metric           | Value                          |
 |------------------|--------------------------------|
