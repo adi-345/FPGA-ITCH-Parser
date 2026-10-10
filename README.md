@@ -10,7 +10,7 @@ If you're reading this and also interested in building cool stuff in this space,
 | Metric           | Value                          |
 |------------------|--------------------------------|
 | LUTs             | 716 (755 post-synthesis)       |
-| Flip-flops       | 355                            |
+| Flip-flops       | 716                            |
 | Clock            | 11 ns (90 MHz), timing met     |
 | Worst neg. slack | +0.477 ns                      |
 | Estimated power  | 0.072 W                        |
